@@ -18,6 +18,7 @@
     <script>
         var buttons = document.querySelectorAll("button");
         var textareas = document.querySelectorAll("textarea");
+        const halfWayBetween = (a,b) => a/2+b/2;
         buttons[0].onclick = function(){
             var numbers = textareas[0].value.split(' ');
             var total = 0
@@ -30,11 +31,10 @@
             var numbers = textareas[1].value.split(' ').map(Number).sort((a,b) => a-b);
             switch (numbers.length % 2 == 0) {
                 case true:
-                    alert(window.halfWayBetween(numbers[numbers.length/2],numbers[numbers.length/2+1]));
+                    alert(halfWayBetween(numbers[numbers.length/2],numbers[numbers.length/2+1]));
                 case false:
-                    alert('not done yet')
+                    alert(numbers[numbers.length/2+0.5])
             }
-            const halfWayBetween = (a,b) => a/2+b/2;
         }
     </script>
 </body>
