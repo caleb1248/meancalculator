@@ -1,41 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mean calculator</title>
-</head>
-<body>
-    <h1>Mean calculator</h1>
-    Seperate the numbers with spaces.
-    <textarea cols="40" rows="1"></textarea>
-    <button>Calculate</button>
-    <h1>Median calculator</h1>
-    Seperate the numbers with spaces.
-    <textarea cols="40" rows="1"></textarea>
-    <button>Calculate</button>
-    <script>
-        var buttons = document.querySelectorAll("button");
-        var textareas = document.querySelectorAll("textarea");
-        const halfWayBetween = (a,b) => a/2+b/2;
-        buttons[0].onclick = function(){
-            var numbers = textareas[0].value.split(' ');
-            var total = 0
-            for (const i of numbers) {
-                total += parseInt(i);
-            };
-            alert(total/numbers.length);
-        }
-        buttons[1].onclick = function(){
-            var numbers = textareas[1].value.split(' ').map(Number).sort((a,b) => a-b);
-            switch (numbers.length % 2 == 0) {
-                case true:
-                    alert(halfWayBetween(numbers[numbers.length/2],numbers[numbers.length/2+1]));
-                case false:
-                    alert(numbers[numbers.length/2-.5])
-            }
-        }
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mean, mode, median, and range calculators</title>
+    </head>
+    <body>
+        <a href="mean.html">mean calculator</a>
+        <a href="median.html">median calculator</a>
+    </body>
 </html>
