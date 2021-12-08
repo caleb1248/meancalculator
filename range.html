@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="globalstyles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range calculator</title>
+</head>
+<body>
+    <h1>Range calculator</h1>
+    Seperate the numbers with spaces.
+    <textarea cols="40" rows="1"></textarea>
+    <button>Calculate</button>
+    <script>
+        document.querySelector("button").onclick = function()
+        {
+            const numbers = document.querySelector("textarea").value.split(" ").map(Number);
+            alert(Math.max(numbers)-Math.min(numbers));
+        }
+    </script>
+</body>
+</html>
