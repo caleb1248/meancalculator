@@ -13,9 +13,9 @@
     <textarea cols="40" rows="1"></textarea>
     <button>Calculate</button>
     <script>
-        document.querySelector("button").onclick = function()
-        {
+        document.querySelector("button").onclick = function(){
             const numbers = document.querySelector("textarea").value.split(" ").map(Number);
+            alert(numbers)
             alert(Math.max(numbers)-Math.min(numbers));
         }
     </script>
