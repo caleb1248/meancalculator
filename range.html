@@ -10,7 +10,7 @@
 <body>
     <h1>Range calculator</h1>
     Seperate the numbers with spaces.
-    <textarea cols="40" rows="1"></textarea>
+    <textarea cols="40" rows="1" onkeydown="if(event.key=='Enter'){event.preventDefault();document.querySelector('button').click()}"></textarea>
     <button>Calculate</button>
     <script>
         document.querySelector("button").onclick = function(){
